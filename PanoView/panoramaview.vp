@@ -1,0 +1,16 @@
+#version 130
+
+
+in vec4 vVertex;
+in vec4 vTexture0;
+
+uniform mat4     mvpMatrix;
+smooth out vec2  vTexCoords;
+
+void main(void) 
+{ 
+    vTexCoords = vTexture0.st;
+    gl_Position = mvpMatrix * vVertex;
+	//gl_Position = vVertex;
+}
+    
